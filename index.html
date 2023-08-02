@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+<body>
+  <div class="container">
+    <div class="entry-container">
+      <div class="entry">
+        <span>DAY</span>
+        <input type="number"  id="day" placeholder="DD">
+        <small class="error-day">this field is required</small>
+      </div>
+      <div class="entry">
+        <span>MONTH</span>
+        <input type="number" id="month" placeholder="MM">
+        <small class="error-month"></small>
+      </div>
+      <div class="entry">
+        <span>YEAR</span>
+        <input type="number" id="year" placeholder="YYYY">
+        <small class="error-year"></small>
+      </div>
+    </div>
+    <hr>
+    <button class="btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+    </button>
+
+    <div class="output">
+      <h1><span class="output1">--</span>Years</h1>
+      <h1><span class="output2">--</span>Months</h1>
+      <h1><span class="output3">--</span>Days</h1>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Nitinrao-1508">Nitin rao</a>.
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

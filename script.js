@@ -31,19 +31,19 @@
 //         error_day.textContent = '';
 //     }
 // });
+// JavaScript code for Age Calculator App
 
-
-// input
+// Get references to the input elements
 const dayInput = document.getElementById('day');
 const monthInput = document.getElementById('month');
 const yearInput = document.getElementById('year');
 
-// output
+// Get references to the output elements
 const output1 = document.querySelector('.output1');
 const output2 = document.querySelector('.output2');
 const output3 = document.querySelector('.output3');
 
-// button
+// Attach an event listener to the button
 const button = document.querySelector('.btn');
 button.addEventListener('click', calculateAge);
 
@@ -55,19 +55,21 @@ function calculateAge() {
     errorMsg.textContent = '';
   });
 
-  //input values as integers
+  // Get the input values as integers
   const day = parseInt(dayInput.value);
   const month = parseInt(monthInput.value);
   const year = parseInt(yearInput.value);
 
-  //input field is empty or not a number
+  let hasErrors = false;
+
+  // Check if any input field is empty or not a number
   if (isNaN(day) || day <= 0 || day > 31) {
     if (dayInput.value.trim() === '') {
       document.querySelector('.error-day').textContent = 'Field is required';
     } else {
       document.querySelector('.error-day').textContent = 'Must be a valid date';
     }
-    return;
+    hasErrors = true;
   }
 
   if (isNaN(month) || month <= 0 || month > 12) {
@@ -76,7 +78,7 @@ function calculateAge() {
     } else {
       document.querySelector('.error-month').textContent = 'Must be a valid date';
     }
-    return;
+    hasErrors = true;
   }
 
   if (isNaN(year) || year <= 0) {
@@ -85,10 +87,15 @@ function calculateAge() {
     } else {
       document.querySelector('.error-year').textContent = 'Must be a valid date';
     }
+    hasErrors = true;
+  }
+
+  if (hasErrors) {
     return;
   }
 
- 
+  // Perform the age calculation (you can use a library like moment.js for more precise calculations)
+  // For simplicity, we assume the current date is 2023-08-02
   const currentDate = new Date(2023, 7, 2);
   const inputDate = new Date(year, month - 1, day);
 
